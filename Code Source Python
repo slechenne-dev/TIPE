@@ -26,15 +26,6 @@ Matrice_des_branches = [[(0, 0) for i in range(40)] for j in range(40)]
 L = [[0 for i in range(40)] for j in range(40)]
 
 
-#calculer et dessiner le prochain tableau 
-def tableau():
-    global flag
-    calculer_pledge()
-    dessiner()
-    if flag == 1:
-        fenetre.after(300, tableau)
-    else:
-        flag = 0
         
 # Données initiales
 def init():
@@ -795,13 +786,11 @@ def calculer_bis():
                 if etat[x][y] ==rover :
                     parcour_largeur(x, y)
                     (u, v) = (x, y)
-                    print(u, v)
     for y in range(haut):
         for x in range(larg):
             if etat[x][y] == arrivée:
                 (p, q) = (x, y)
                 l = Matrice_des_chemins[x][y].copy()
-                print(l)
                 for i in range(1, len(l) - 1):
                     w = l[i]
                     (xa, ya) = w
@@ -910,12 +899,6 @@ canvas = Canvas(fenetre, width=cote*larg,  height = cote*haut)
 canvas.pack()
 bouton1 = Button(fenetre, text = "fermer l'automate", command=fenetre.destroy)
 bouton1.pack(side = LEFT)
-bouton2 = Button(fenetre, text = "demmarrer", command=demarrer)
-bouton2.pack(side = LEFT)
-bouton4 = Button(fenetre, text = "pause", command=pause)
-bouton4.pack(side = LEFT)
-bouton4 = Button(fenetre, text = "generate maze", command=bordures)
-bouton4.pack(side = LEFT)
 bouton5 = Button(fenetre, text = "matrice des chemins", command = calculer_bis)
 bouton5.pack(side = RIGHT)
 bouton6 = Button(fenetre, text = "aller à l'objectif'", command = resolutionlineaire)
@@ -936,4 +919,27 @@ fenetre.mainloop()
             x_: le mur est au dessus
             
             
-  
+            x          = 0
+            |x         = 1
+            x|         =  2
+            _x         = 3
+            x_         = 4
+            
+            |x|        = 5
+            
+            |x_        = 6
+            
+            |_x        = 7
+            
+            _x_        = 8
+            
+            x_|        = 9
+            
+            _x|        = 10
+            
+            |x_|       = 11
+            |_x|       = 12
+            _x_|       = 13
+            |_x_       = 14
+            |_x_|      = 15
+ 
