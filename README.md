@@ -19,5 +19,8 @@ Noire -> Objectif du Rover
 Pour faire fonctionner les differents algorithmes, compiler le code ouvrira une fenetre Tkinter, qui comporte une grille dont les bordures foncées sont les murs du labyrinthes.
 Ensuite, cliquer plusieurs fois sur une case fera alterner la couleur, donc le contenu de la case.
 
-Une fois 1 rover et 1 Objectif placé, appuyer d'abord sur "matrice des chemins" (pour trouver le chemin) puis sur "aller à l'objectif" pour declencher l'animation graphique. 
+Une fois 1 rover et 1 objectif placé, appuyer d'abord sur "matrice des chemins" (pour trouver le chemin) puis sur "aller à l'objectif" pour declencher l'animation graphique qui amène le rover à l'objectif.
+
+
+Normalement, ce travail de TIPE comporte une deuxième partie concernant la résolution avec plusieurs rovers et 1 objectif, mais je n'ai pas fini l'implémentation en python avavnt la date de rendu des dossiers.
 
